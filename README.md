@@ -21,13 +21,10 @@ docker-compose up --build -d
 http://localhost:3004/graphiql
 
 * references
-
-graphql
+  * graphql  
 https://graphql.org/
-
-graphql-ruby
+  * graphql-ruby  
 https://graphql-ruby.org/
 https://github.com/rmosolgo/graphql-ruby
-
-how to graphql
+  * how to graphql
 https://www.howtographql.com/
