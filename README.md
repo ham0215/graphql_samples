@@ -24,7 +24,7 @@ http://localhost:3004/graphiql
   * graphql  
 https://graphql.org/
   * graphql-ruby  
-https://graphql-ruby.org/
+https://graphql-ruby.org/  
 https://github.com/rmosolgo/graphql-ruby
   * how to graphql
 https://www.howtographql.com/
