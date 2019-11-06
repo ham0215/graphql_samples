@@ -2,18 +2,26 @@
 
 This is samples using GraphQl-Ruby.
 
+![](https://github.com/ham0215/graphql_samples/workflows/Ruby/badge.svg)
+
 ## Ruby version
 
-2.6.3
+2.6.5
 
 ## Rails version
 
 6.0.0
 
-## run web server
+## Run web server
 
 ```
 docker-compose up --build -d
+```
+
+## Generate schema
+
+```
+bundle exec rake graphql:schema:dump
 ```
 
 ## database
