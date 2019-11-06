@@ -12,10 +12,16 @@ This is samples using GraphQl-Ruby.
 
 6.0.0
 
-## run web server
+## Run web server
 
 ```
 docker-compose up --build -d
+```
+
+## Generate schema
+
+```
+bundle exec rake graphql:schema:dump
 ```
 
 ## database
