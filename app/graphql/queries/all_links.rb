@@ -1,7 +1,7 @@
 module Queries
   class AllLinks < BaseQuery
     type [Types::LinkType], null: false
-    description "Query all Links"
+    description 'Query all Links'
 
     argument :description, String, required: false, default_value: nil
 
