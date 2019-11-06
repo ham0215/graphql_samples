@@ -2,9 +2,11 @@
 
 This is samples using GraphQl-Ruby.
 
+![](https://github.com/ham0215/graphql_samples/workflows/Ruby/badge.svg)
+
 ## Ruby version
 
-2.6.3
+2.6.5
 
 ## Rails version
 
