@@ -6,7 +6,7 @@ module Types
       description 'select reviews'
     end
     def reviews
-      Review.all
+      Review.all.order(id: :desc)
     end
   end
 end
