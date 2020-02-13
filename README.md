@@ -1,6 +1,6 @@
 # README
 
-This is samples using GraphQl-Ruby.
+This is samples using Graphql-Ruby.
 
 ![](https://github.com/ham0215/graphql_samples/workflows/Ruby/badge.svg)
 
@@ -10,7 +10,7 @@ This is samples using GraphQl-Ruby.
 
 ## Rails version
 
-6.0.0
+6.0.2.1
 
 ## Run web server
 
