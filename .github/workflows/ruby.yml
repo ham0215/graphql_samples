@@ -56,8 +56,8 @@ jobs:
       run:  yarn install --check-files
     - name: migration
       run: |
-        bundle exec rake db:create
-        bundle exec rake db:test:prepare
+        bundle exec rails db:create
+        bundle exec rails db:test:prepare
     - name: run rspec
       run: bundle exec rspec
 
