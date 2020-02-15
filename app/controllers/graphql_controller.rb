@@ -8,7 +8,7 @@ class GraphqlController < ApplicationController
     context = {
       # we need to provide session and current user
       session: session,
-      current_user: current_user
+      current_user: current_user,
     }
     result = AppSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
