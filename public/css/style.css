@@ -1,0 +1,21 @@
+.keyboard {
+  min-width: 120px;
+  padding: 0 0px;
+  margin: 0px 0px;
+  background: #ededed;
+  border-radius: 0px;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  color: #808080;
+  font: bold 18px arial;
+  text-align: center;
+  display: inline-block;
+}
+
+.break:before {
+  content: "\A";
+  white-space: pre;
+}
+
+.break {
+  font: 10px arial;
+}
