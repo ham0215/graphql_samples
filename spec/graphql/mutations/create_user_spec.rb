@@ -7,7 +7,7 @@ RSpec.describe Mutations::CreateUser do
     {
       name: name,
       auth_provider: {
-        email: {
+        credentials: {
           email: email,
           password: 'hogehoge'
         }
