@@ -39,6 +39,12 @@ docker-compose exec web rails db:migrate
 docker-compose exec web rake db:seed_fu
 ```
 
+## credentials
+
+```
+docker-compose exec web rails credentials:edit
+```
+
 ## graphiql
 
 http://localhost:3004/graphiql
