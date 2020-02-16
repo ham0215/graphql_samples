@@ -18,6 +18,10 @@ This is samples using Graphql-Ruby.
 docker-compose up --build -d
 ```
 
+## access
+http://localhost:3004
+
+
 ## Generate schema
 
 ```
