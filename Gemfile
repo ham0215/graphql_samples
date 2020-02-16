@@ -18,6 +18,9 @@ gem 'jbuilder'
 # Use Active Model has_secure_password
 gem 'bcrypt'
 
+gem 'devise'
+gem 'jwt'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 #
