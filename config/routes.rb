@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   namespace :admin do
-      resources :examinees
-      resources :reviews
-      resources :links
-      resources :users
+    resources :examinees
+    resources :reviews
+    resources :links
+    resources :users
 
-      root to: "examinees#index"
-    end
+    root to: "examinees#index"
+  end
   devise_for :examinees
 
   if Rails.env.development?
