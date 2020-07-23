@@ -10,7 +10,7 @@ This is samples using Graphql-Ruby.
 
 ## Rails version
 
-6.0.2.1
+6.0.3.2
 
 ## Run web server
 
