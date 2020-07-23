@@ -11,6 +11,7 @@ AllCops:
     - "Gemfile"
     - "Capfile"
     - "node_modules/**/*"
+    - "app/dashboards/**/*"
 
   DisplayCopNames: true
 
@@ -21,6 +22,9 @@ Layout/ClassStructure:
 
 Layout/DotPosition:
   EnforcedStyle: trailing
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
 
 Layout/ExtraSpacing:
   Exclude:
@@ -38,6 +42,9 @@ Layout/IndentationConsistency:
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented_relative_to_receiver
 
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
 Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 
@@ -46,6 +53,12 @@ Layout/SpaceInsideBlockBraces:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*_spec.rb"
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/DuplicateElsifCondition:
+  Enabled: true
 
 Lint/EmptyWhen:
   Enabled: false
@@ -56,8 +69,17 @@ Lint/SuppressedException:
 Lint/InheritException:
   EnforcedStyle: standard_error
 
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
 Lint/PercentStringArray:
   Enabled: false
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
 
 Lint/UnderscorePrefixedVariableName:
   Enabled: false
@@ -134,22 +156,31 @@ Security/YAMLLoad:
 
 #################### Style #################################
 
+Style/AccessorGrouping:
+  Enabled: true
+
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
 Style/AndOr:
   EnforcedStyle: conditionals
 
+Style/ArrayCoercion:
+  Enabled: true
+
 Style/AsciiComments:
   Enabled: false
+
+Style/BisectedAttrAccessor:
+  Enabled: true
 
 Style/BlockDelimiters:
   AutoCorrect: false
   Exclude:
     - "spec/**/*_spec.rb"
 
-Style/BracesAroundHashParameters:
-  Enabled: false
+Style/CaseLikeIf:
+  Enabled: true
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -179,6 +210,9 @@ Layout/EmptyLineAfterGuardClause:
 Style/EmptyMethod:
   EnforcedStyle: expanded
 
+Style/ExponentialNotation:
+  Enabled: true
+
 Style/FormatString:
   EnforcedStyle: percent
 
@@ -187,6 +221,21 @@ Style/FrozenStringLiteralComment:
 
 Style/GuardClause:
   MinBodyLength: 5
+
+Style/HashAsLastArrayItem:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashLikeCase:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
 
 Style/HashSyntax:
   Enabled: false
@@ -224,6 +273,21 @@ Style/PerlBackrefs:
 Style/PreferredHashMethods:
   EnforcedStyle: verbose
 
+Style/RedundantAssignment:
+  Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: true
+
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+
 Style/RedundantReturn:
   AllowMultipleReturnValues: true
 
@@ -239,6 +303,9 @@ Style/SafeNavigation:
 Style/Semicolon:
   Exclude:
     - "spec/**/*_spec.rb"
+
+Style/SlicingWithRange:
+  Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
