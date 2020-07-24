@@ -1,5 +1,5 @@
 module Resolvers
-  class Review < BaseResolver
+  class ReviewResolver < BaseResolver
     type Types::ReviewType, null: false
 
     argument :review_id, Int, required: true
