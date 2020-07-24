@@ -9,7 +9,7 @@ module Types
     field :posted_by, UserType, null: true, method: :user
 
     def self.visible?(context)
-      super && context[:current_user].present?
+      super# && context[:current_user].present?
     end
   end
 end

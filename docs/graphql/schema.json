@@ -71,6 +71,16 @@
         },
         {
           "kind": "SCALAR",
+          "name": "AuthScalar",
+          "description": null,
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "SCALAR",
           "name": "Boolean",
           "description": "Represents `true` or `false` values.",
           "fields": null,
@@ -420,6 +430,37 @@
               "deprecationReason": null
             },
             {
+              "name": "review",
+              "description": null,
+              "args": [
+                {
+                  "name": "reviewId",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "Int",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Review",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "reviews",
               "description": "select reviews",
               "args": [
@@ -493,7 +534,7 @@
               ],
               "type": {
                 "kind": "SCALAR",
-                "name": "String",
+                "name": "AuthScalar",
                 "ofType": null
               },
               "isDeprecated": false,

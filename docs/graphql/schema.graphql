@@ -7,6 +7,8 @@ input AuthProviderSignupData {
   credentials: AUTH_PROVIDER_CREDENTIALS
 }
 
+scalar AuthScalar
+
 type Link {
   description: String!
   id: ID!
@@ -50,6 +52,7 @@ type Query {
   Query all Links
   """
   allLinks(description: String = null): [Link!]!
+  review(reviewId: Int!): Review!
 
   """
   select reviews
@@ -78,7 +81,7 @@ type Query {
 }
 
 type Review {
-  body: String
+  body: AuthScalar
   id: ID!
   title: String
 }
