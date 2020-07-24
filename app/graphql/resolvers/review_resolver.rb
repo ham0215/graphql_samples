@@ -1,11 +1,11 @@
 module Resolvers
-  class ReviewResolver < BaseResolver
-    type Types::ReviewType, null: false
+  class ReviewResolver < LoginRequiredResolver
+    type Types::ReviewType, null: true
 
     argument :review_id, Int, required: true
 
     def resolve(review_id:)
-      Review.find review_id
+      Review.find_by(id: review_id)
     end
   end
 end
