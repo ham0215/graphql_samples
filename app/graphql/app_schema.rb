@@ -6,4 +6,8 @@ class AppSchema < GraphQL::Schema
   use GraphQL::Analysis::AST
 
   use GraphQL::Pagination::Connections
+
+  def self.unauthorized_object(error)
+    raise GraphQL::ExecutionError, error.message
+  end
 end

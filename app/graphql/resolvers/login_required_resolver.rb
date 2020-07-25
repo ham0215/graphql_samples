@@ -1,7 +1,9 @@
 module Resolvers
   class LoginRequiredResolver < BaseResolver
     def authorized?(args)
-      context[:current_user].present?
+      raise GraphQL::UnauthorizedError, 'login required!!' unless context[:current_user].present?
+
+      super
     end
   end
 end
