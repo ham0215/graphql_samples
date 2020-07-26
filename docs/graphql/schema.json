@@ -71,16 +71,6 @@
         },
         {
           "kind": "SCALAR",
-          "name": "AuthScalar",
-          "description": null,
-          "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "SCALAR",
           "name": "Boolean",
           "description": "Represents `true` or `false` values.",
           "fields": null,
@@ -449,13 +439,9 @@
                 }
               ],
               "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "Review",
-                  "ofType": null
-                }
+                "kind": "OBJECT",
+                "name": "Review",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -534,7 +520,7 @@
               ],
               "type": {
                 "kind": "SCALAR",
-                "name": "AuthScalar",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -559,6 +545,20 @@
               "deprecationReason": null
             },
             {
+              "name": "secret",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "title",
               "description": null,
               "args": [
@@ -568,6 +568,24 @@
                 "kind": "SCALAR",
                 "name": "String",
                 "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "user",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "User",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
