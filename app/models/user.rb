@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: { case_sensitive: true }
 
   has_many :links
+  has_many :reviews
 end
