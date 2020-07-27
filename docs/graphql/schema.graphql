@@ -18,6 +18,7 @@ type Mutation {
   createLink(description: String!, url: String!): Link!
   createUser(authProvider: AuthProviderSignupData, name: String!): User!
   signinUser(credentials: AUTH_PROVIDER_CREDENTIALS): SignInUserPayload
+  updateReview(body: String, reviewId: Int!, title: String): Review!
 }
 
 """
