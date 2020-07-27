@@ -15,6 +15,7 @@ jobs:
       RAILS_ENV: test
       DB_HOST: 127.0.0.1
       DB_PORT: 33060
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
     services:
       db:
         image: mysql:5.7.27
