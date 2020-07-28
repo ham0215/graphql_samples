@@ -1,6 +1,6 @@
 module Resolvers
   class ReviewResolver < LoginRequiredResolver
-    type Types::MyReviewType, null: true
+    type Types::ReviewType, null: true
 
     argument :review_id, Int, required: true
 
