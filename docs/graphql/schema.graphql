@@ -21,14 +21,6 @@ type Mutation {
   updateReview(body: String, reviewId: Int!, title: String): Review!
 }
 
-type MyReview {
-  body: String
-  id: ID!
-  secret: String
-  title: String
-  user: User!
-}
-
 """
 Information about pagination in a connection.
 """
@@ -59,7 +51,7 @@ type Query {
   Query all Links
   """
   allLinks(description: String = null): [Link!]!
-  review(reviewId: Int!): MyReview
+  review(reviewId: Int!): Review
 
   """
   select reviews
