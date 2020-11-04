@@ -2,7 +2,7 @@
 
 This is samples using Graphql-Ruby.
 
-![](https://github.com/ham0215/graphql_samples/workflows/Ruby/badge.svg)
+![Ruby](https://github.com/ham0215/graphql_samples/workflows/Ruby/badge.svg)
 
 ## Ruby version
 
