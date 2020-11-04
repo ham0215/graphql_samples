@@ -8,8 +8,8 @@ module Types
     # "method" option remaps field to an attribute of Link model
     field :posted_by, UserType, null: true, method: :user
 
-    def self.visible?(context)
-      super # && context[:current_user].present?
-    end
+    # def self.visible?(context)
+    #   super # && context[:current_user].present?
+    # end
   end
 end
