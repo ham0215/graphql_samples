@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Mutations::CreateLink do
-  subject(:mutation) { described_class.new(object: nil, context: context, field: nil).resolve(args) }
+  subject(:mutation) { described_class.new(object: nil, context: context, field: nil).resolve(**args) }
 
   let(:args) { { url: url, description: description } }
   let(:url) { 'http://example.com' }

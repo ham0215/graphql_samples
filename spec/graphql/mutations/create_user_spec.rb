@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Mutations::CreateUser do
-  subject(:mutation) { described_class.new(object: nil, context: {}, field: nil).resolve(args) }
+  subject(:mutation) { described_class.new(object: nil, context: {}, field: nil).resolve(**args) }
 
   let(:args) do
     {
