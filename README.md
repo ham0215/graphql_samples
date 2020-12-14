@@ -6,11 +6,11 @@ This is samples using Graphql-Ruby.
 
 ## Ruby version
 
-2.6.5
+2.7.2
 
 ## Rails version
 
-6.0.3.4
+6.1
 
 ## Run web server
 
