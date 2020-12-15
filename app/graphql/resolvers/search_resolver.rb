@@ -5,7 +5,9 @@ module Resolvers
     argument :text, String, required: false
 
     def resolve(text: nil)
-      text.nil? ? Character.all : Character.where('name like ?', "%#{text}%")
+      chars = Character.all
+      chars = chars.where('name like ?', "%#{text}%") if text
+      chars.preload(char: :character)
     end
   end
 end
