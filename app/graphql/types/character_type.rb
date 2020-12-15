@@ -4,11 +4,11 @@ module Types
 
     def self.resolve_type(object, context)
       if object.human?
-        Types::HumanType
+        [Types::HumanType, object.human]
       elsif object.droid?
-        Types::DroidType
+        [Types::DroidType, object.droid]
       elsif object.starship?
-        Types::Starship
+        [Types::StarshipType, object.starship]
       end
     end
   end
