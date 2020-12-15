@@ -2,8 +2,8 @@ class CreateTableDelegatingType < ActiveRecord::Migration[6.1]
   def change
     create_table :characters do |t|
       t.string :name, null: false
-      t.integer :character_type, null: false, limit: 1
-      t.bigint :character_id, null: false
+      t.integer :char_type, null: false, limit: 1
+      t.bigint :char_id, null: false
 
       t.timestamps
     end
