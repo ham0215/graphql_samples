@@ -1,3 +1,3 @@
-class Doroid < ApplicationRecord
+class Droid < ApplicationRecord
   include Char
 end

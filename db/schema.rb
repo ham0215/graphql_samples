@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_15_031635) do
 
   create_table "characters", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "char_type", limit: 1, null: false
+    t.string "char_type", limit: 10, null: false
     t.bigint "char_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
