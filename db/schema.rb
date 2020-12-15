@@ -2,17 +2,31 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_145026) do
+ActiveRecord::Schema.define(version: 2020_12_15_031635) do
 
-  create_table "examinees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "characters", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "character_type", limit: 1, null: false
+    t.bigint "character_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "droids", charset: "utf8mb4", force: :cascade do |t|
+    t.string "primary_function", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "examinees", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -29,7 +43,13 @@ ActiveRecord::Schema.define(version: 2020_07_25_145026) do
     t.index ["reset_password_token"], name: "index_examinees_on_reset_password_token", unique: true
   end
 
-  create_table "links", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "humans", charset: "utf8mb4", force: :cascade do |t|
+    t.float "height", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "links", charset: "utf8mb4", force: :cascade do |t|
     t.string "url"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
@@ -38,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_145026) do
     t.index ["user_id"], name: "index_links_on_user_id"
   end
 
-  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.string "secret"
@@ -48,7 +68,13 @@ ActiveRecord::Schema.define(version: 2020_07_25_145026) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "starships", charset: "utf8mb4", force: :cascade do |t|
+    t.float "length", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
