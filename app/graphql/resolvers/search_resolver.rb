@@ -1,11 +1,11 @@
 module Resolvers
   class SearchResolver < BaseResolver
-    type Types::CharacterType, null: false
+    type Types::CharacterType.connection_type, null: false
 
-    argument :id, Int, required: true
+    argument :text, String, required: false
 
-    def resolve(id:)
-      Character.find_by(id: id)
+    def resolve(text: nil)
+      text.nil? ? Character.all : Character.where('name like ?', "%#{text}%")
     end
   end
 end
