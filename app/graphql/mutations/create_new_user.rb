@@ -5,13 +5,10 @@ module Mutations
     argument :name, String, required: true
     argument :email, String, required: true
 
-    type Types::UserType
+    field :user, Types::UserType, null: false
 
     def resolve(name:, email:)
-      User.create!(
-        name: name,
-        email: email,
-      )
+      { user: User.create!( name: name, email: email) }
     end
   end
 end
