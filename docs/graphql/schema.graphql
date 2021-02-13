@@ -82,7 +82,7 @@ type Mutation {
     Parameters for CreateNewUser
     """
     input: CreateNewUserInput!
-  ): User
+  ): User!
   createOldUser(email: String!, name: String!): User!
   createUser(authProvider: AuthProviderSignupData, name: String!): User!
   signinUser(credentials: AUTH_PROVIDER_CREDENTIALS): SignInUserPayload
