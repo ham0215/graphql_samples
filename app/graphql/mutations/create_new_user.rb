@@ -8,7 +8,7 @@ module Mutations
     field :user, Types::UserType, null: false
 
     def resolve(name:, email:)
-      { user: User.create!( name: name, email: email) }
+      { user: User.create!(name: name, email: email) }
     end
   end
 end
