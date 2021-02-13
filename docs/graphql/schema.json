@@ -53,29 +53,6 @@
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "AuthProviderSignupData",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "credentials",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "AUTH_PROVIDER_CREDENTIALS",
-                "ofType": null
-              },
-              "defaultValue": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
           "kind": "SCALAR",
           "name": "Boolean",
           "description": "Represents `true` or `false` values.",
@@ -551,12 +528,16 @@
                   "deprecationReason": null
                 },
                 {
-                  "name": "authProvider",
+                  "name": "email",
                   "description": null,
                   "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "AuthProviderSignupData",
-                    "ofType": null
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
                   },
                   "defaultValue": null,
                   "isDeprecated": false,

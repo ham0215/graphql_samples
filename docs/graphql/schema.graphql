@@ -3,10 +3,6 @@ input AUTH_PROVIDER_CREDENTIALS {
   password: String!
 }
 
-input AuthProviderSignupData {
-  credentials: AUTH_PROVIDER_CREDENTIALS
-}
-
 union Character = Droid | Human | Starship
 
 """
@@ -65,7 +61,7 @@ type Link {
 
 type Mutation {
   createLink(description: String!, url: String!): Link!
-  createUser(authProvider: AuthProviderSignupData, name: String!): User!
+  createUser(email: String!, name: String!): User!
   signinUser(credentials: AUTH_PROVIDER_CREDENTIALS): SignInUserPayload
   updateReview(body: String, reviewId: Int!, title: String): Review!
 }
