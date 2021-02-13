@@ -21,7 +21,7 @@ type CharacterConnection {
   """
   A list of nodes.
   """
-  nodes: [Character]
+  nodes: [Character!]!
 
   """
   Information to aid in pagination.
@@ -170,7 +170,7 @@ type ReviewConnection {
   """
   A list of nodes.
   """
-  nodes: [Review]
+  nodes: [Review!]!
 
   """
   Information to aid in pagination.
