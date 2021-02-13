@@ -2,7 +2,7 @@ module Mutations
   class BaseMutation < GraphQL::Schema::Mutation
     null false
   end
-=begin
+=begin # rubocop:disable Style/BlockComments
   class BaseMutation < GraphQL::Schema::RelayClassicMutation
     argument_class Types::BaseArgument
     field_class Types::BaseField
