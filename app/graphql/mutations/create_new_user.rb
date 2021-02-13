@@ -1,5 +1,5 @@
 module Mutations
-  class CreateUser < BaseNewMutation
+  class CreateNewUser < BaseNewMutation
     argument :name, String, required: true
     argument :email, String, required: true
 
