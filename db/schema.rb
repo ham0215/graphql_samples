@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_031635) do
+ActiveRecord::Schema.define(version: 2021_02_15_073206) do
 
   create_table "characters", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -58,6 +58,12 @@ ActiveRecord::Schema.define(version: 2020_12_15_031635) do
     t.index ["user_id"], name: "index_links_on_user_id"
   end
 
+  create_table "organizations", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -72,6 +78,15 @@ ActiveRecord::Schema.define(version: 2020_12_15_031635) do
     t.float "length", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_organizations", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "organization_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["organization_id"], name: "organization_id"
+    t.index ["user_id"], name: "user_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|

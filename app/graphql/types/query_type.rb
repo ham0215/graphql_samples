@@ -5,6 +5,7 @@ module Types
     field :review, resolver: Resolvers::ReviewResolver
 
     field :search, resolver: Resolvers::SearchResolver
+    field :user, resolver: Resolvers::UserResolver
 
     field :reviews, Types::ReviewType.connection_type, null: true do
       description 'select reviews'
