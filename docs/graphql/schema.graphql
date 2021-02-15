@@ -110,7 +110,7 @@ type Mutation {
 type Organization {
   id: ID!
   name: String!
-  userOrganizations(
+  users(
     """
     Returns the elements in the list that come after the specified cursor.
     """
@@ -130,7 +130,42 @@ type Organization {
     Returns the last _n_ elements from the list.
     """
     last: Int
-  ): UserOrganizationConnection!
+  ): UserConnection!
+}
+
+"""
+The connection type for Organization.
+"""
+type OrganizationConnection {
+  """
+  A list of edges.
+  """
+  edges: [OrganizationEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Organization!]!
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type OrganizationEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Organization
 }
 
 """
@@ -275,7 +310,7 @@ type User {
   email: String!
   id: ID!
   name: String!
-  userOrganizations(
+  organizations(
     """
     Returns the elements in the list that come after the specified cursor.
     """
@@ -295,28 +330,22 @@ type User {
     Returns the last _n_ elements from the list.
     """
     last: Int
-  ): UserOrganizationConnection!
-}
-
-type UserOrganization {
-  id: ID!
-  organization: Organization!
-  user: User!
+  ): OrganizationConnection!
 }
 
 """
-The connection type for UserOrganization.
+The connection type for User.
 """
-type UserOrganizationConnection {
+type UserConnection {
   """
   A list of edges.
   """
-  edges: [UserOrganizationEdge]
+  edges: [UserEdge]
 
   """
   A list of nodes.
   """
-  nodes: [UserOrganization!]!
+  nodes: [User!]!
 
   """
   Information to aid in pagination.
@@ -327,7 +356,7 @@ type UserOrganizationConnection {
 """
 An edge in a connection.
 """
-type UserOrganizationEdge {
+type UserEdge {
   """
   A cursor for use in pagination.
   """
@@ -336,5 +365,5 @@ type UserOrganizationEdge {
   """
   The item at the end of the edge.
   """
-  node: UserOrganization
+  node: User
 }

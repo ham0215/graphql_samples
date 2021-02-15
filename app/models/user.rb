@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :links
   has_many :reviews
   has_many :user_organizations
+  has_many :organizations, through: :user_organizations
 
   def admin?
     true
