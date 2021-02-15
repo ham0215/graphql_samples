@@ -107,6 +107,32 @@ type Mutation {
   updateReview(body: String, reviewId: Int!, title: String): Review!
 }
 
+type Organization {
+  id: ID!
+  name: String!
+  userOrganizations(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): UserOrganizationConnection!
+}
+
 """
 Information about pagination in a connection.
 """
@@ -185,6 +211,7 @@ type Query {
     last: Int
     text: String
   ): CharacterConnection!
+  user(userId: Int!): User
 }
 
 type Review {
@@ -248,4 +275,66 @@ type User {
   email: String!
   id: ID!
   name: String!
+  userOrganizations(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): UserOrganizationConnection!
+}
+
+type UserOrganization {
+  id: ID!
+  organization: Organization!
+  user: User!
+}
+
+"""
+The connection type for UserOrganization.
+"""
+type UserOrganizationConnection {
+  """
+  A list of edges.
+  """
+  edges: [UserOrganizationEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [UserOrganization!]!
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type UserOrganizationEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: UserOrganization
 }
